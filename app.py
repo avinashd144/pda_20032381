@@ -30,7 +30,10 @@ CORS(app)
 # My SQL Instance configurations
 # Change the HOST IP and Password to match your instance configurations
 
-@app.route("/index", methods=['GET', 'POST']) #Add Student
+
+@app.route("/index.html") # Default-show data
+def index():
+    return render_template("index.html")
 @app.route("/add", methods=['GET', 'POST']) #Add Student
 def add():
   if request.method == 'POST':
