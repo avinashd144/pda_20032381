@@ -216,7 +216,7 @@ def get():
     Result['lowestPriceInLast30Days']=row[8]
     Result['priceIsMarkedDown']=row[9]
     Result['currency']=row[10]
-    Results['brandName_encoded']=row[11]
+    Result['brandName_encoded']=row[11]
     Result['price_range_indicator']=row[12]
     Result['discount_percentage']=row[13]
     Result['lowest_price_tag']=row[14]
