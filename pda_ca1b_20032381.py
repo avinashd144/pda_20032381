@@ -179,7 +179,7 @@ key_features
 """# Loading Data"""
 
 import sqlite3
-connection = sqlite3.connect('asos.db')
+connection = sqlite3.connect('asos.db', check_same_thread=False)
 key_features.to_sql('asos_data', connection, if_exists='append', index=False)
 cursor = connection.cursor()
 
