@@ -198,6 +198,10 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
+@app.route("/index.html") # Default-show data
+def index():
+    return render_template("index.html")
+    
 @app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
   cursor.execute("SELECT * FROM asos_data")
