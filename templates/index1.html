@@ -8,15 +8,15 @@
 let doIt=()=>{
   let tab=document.getElementById("tab1");
   let rows=tab1.getElementsByTagName('tr');
-  fetch('https://avinash.uksouth.cloudapp.azure.com:8080/getShoes')
+  fetch('https://avinash.uksouth.cloudapp.azure.com:8080/')
     .then(response => response.json())
     .then(data=>data.Results.forEach(  //.slice(0,3)
       x=>{
         let newRow=rows[0].cloneNode(true);
         let divs=newRow.getElementsByTagName('td');
-        divs[0].innerHTML=x['Id'];
+        divs[0].innerHTML=x['ID'];
         divs[1].innerHTML=x['Name'];
-        divs[2].innerHTML=x['ColourWayId'];
+        divs[2].innerHTML=x['Email'];
         tab1.appendChild(newRow);
       }
     )
