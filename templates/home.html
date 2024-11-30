@@ -61,7 +61,8 @@ let doIt=()=>{
         divs[12].innerHTML=x['price_range_indicator'];
         divs[13].innerHTML=x['discount_percentage'];
         divs[14].innerHTML=x['lowest_price_tag'];
-        tab1.appendChild(newRow);
+        <!--tab1.appendChild(newRow)--> 
+        tab1.insertBefore(newRow, rows[1]);
       }
     )
   );
