@@ -198,9 +198,9 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/index.html") # Default-show data
+@app.route("/home.html") # Default-show data
 def index():
-    return render_template("index.html")
+    return render_template("home.html")
 
 @app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
