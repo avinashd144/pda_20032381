@@ -208,7 +208,7 @@ def addShoes():
     name = request.form['name']
     print(name)
     cursor = connection.cursor() #create a connection to the SQL instance
-    s='''INSERT INTO asos_data(name) VALUES(%s);'''.format(name,)
+    s='''INSERT INTO asos_data(name) VALUES('{}');'''.format(name)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
