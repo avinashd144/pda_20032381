@@ -202,7 +202,7 @@ CORS(app)
 def home():
     return render_template("home.html")
 
-@app.route("/addShoes.html") # Add shoes
+@app.route("/addShoes", methods=['GET']) # Add shoes
 def addShoes():
     return render_template("addShoes.html")
 
