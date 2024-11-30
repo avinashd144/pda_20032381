@@ -204,8 +204,18 @@ def home():
 
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
-  return render_template("addShoes.html")
-  #return '{"Result":"Success"}'
+  if request.method == 'POST':
+    name = request.form['name']
+    print(name)
+    cursor = connection.cursor() #create a connection to the SQL instance
+    s='''INSERT INTO shoesList() VALUES('{}');'''.format(name)
+    app.logger.info(s)
+    cursor.execute(s)
+    connection.commit()
+
+  else:
+    return render_template('addShoes.html')
+  return '{"Result":"Success"}'
 
 @app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
