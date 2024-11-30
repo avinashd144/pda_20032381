@@ -199,7 +199,7 @@ app = Flask(__name__)
 CORS(app)
 
 @app.route("/home.html") # Default-show data
-def index():
+def home():
     return render_template("home.html")
 
 @app.route("/getShoes", methods=['GET']) #Get Shoes
