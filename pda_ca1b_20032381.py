@@ -202,6 +202,10 @@ CORS(app)
 def home():
     return render_template("home.html")
 
+@app.route("/addShoes.html") # Add shoes
+def addShoes():
+    return render_template("addShoes.html")
+
 @app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
   cursor.execute("SELECT * FROM asos_data")
