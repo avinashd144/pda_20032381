@@ -17,6 +17,18 @@ let doIt=()=>{
         divs[0].innerHTML=x['id'];
         divs[1].innerHTML=x['name'];
         divs[2].innerHTML=x['colourWayId'];
+        divs[3].innerHTML=x['brandName'];
+        divs[4].innerHTML=x['productCode'];
+        divs[5].innerHTML=x['sellingIsFast'];
+        divs[6].innerHTML=x['currentPrice'];
+        divs[7].innerHTML=x['previousPrice'];
+        divs[8].innerHTML=x['lowestPriceInLast30Days'];
+        divs[9].innerHTML=x['priceIsMarkedDown'];
+        divs[10].innerHTML=x['currency'];
+        divs[11].innerHTML=x['brandName_encoded'];
+        divs[12].innerHTML=x['price_range_indicator'];
+        divs[13].innerHTML=x['discount_percentage'];
+        divs[14].innerHTML=x['lowest_price_tag'];
         tab1.appendChild(newRow);
       }
     )
@@ -27,7 +39,7 @@ let doIt=()=>{
 <body>
 <button onClick="doIt()">Press me</button>
 This is where the results turn up: <br/>
-<table id='tab1' bgcolor='blue'>
-<tr><td>ID</td><td>Name</td><td>ColourWayId</td></tr>
+<table id='tab1' bgcolor='white'>
+<tr><td>ID</td><td>Name</td><td>ColourWayId</td><td>BrandName</td><td>ProductCode</td><td>SellingIsFast</td><td>CurrentPrice</td><td>PreviousPrice</td><td>LowestPriceInLast30Days</td><td>PriceIsMarkedDown</td><td>Currency</td><td>BrandName_encoded</td><td>Price_range_indicator</td><td>Discount_percentage</td><td>Lowest_price_tag</td></tr>
 </table></body>
 </html>
