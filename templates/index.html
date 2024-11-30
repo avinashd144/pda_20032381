@@ -14,9 +14,9 @@ let doIt=()=>{
       x=>{
         let newRow=rows[0].cloneNode(true);
         let divs=newRow.getElementsByTagName('td');
-        divs[0].innerHTML=x['ID'];
-        divs[1].innerHTML=x['Name'];
-        divs[2].innerHTML=x['Email'];
+        divs[0].innerHTML=x['id'];
+        divs[1].innerHTML=x['name'];
+        divs[2].innerHTML=x['colourWayId'];
         tab1.appendChild(newRow);
       }
     )
@@ -28,6 +28,6 @@ let doIt=()=>{
 <button onClick="doIt()">Press me</button>
 This is where the results turn up: <br/>
 <table id='tab1' bgcolor='blue'>
-<tr><td>ID</td><td>Name</td><td>Email</td></tr>
+<tr><td>ID</td><td>Name</td><td>ColourWayId</td></tr>
 </table></body>
 </html>
