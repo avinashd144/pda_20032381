@@ -205,7 +205,6 @@ def home():
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
   if request.method == 'POST':
-    Id = request.form['id']
     colourWayId = request.form['colourWayId']
     brandName = request.form['brandName']
     productCode = request.form['productCode']
@@ -219,9 +218,9 @@ def addShoes():
     price_range_indicator = request.form['price_range_indicator']
     discount_percentage = request.form['discount_percentage']
     lowest_price_tag = request.form['lowest_price_tag']
-    print(Id,name,colourWayId,brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
+    print(name,colourWayId,brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
     cursor = connection.cursor() #create a connection to the SQL instance
-    s='''INSERT INTO asos_data(id, name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(Id, name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
+    s='''INSERT INTO asos_data(name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
