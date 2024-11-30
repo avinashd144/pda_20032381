@@ -205,10 +205,23 @@ def home():
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
   if request.method == 'POST':
-    name = request.form['name']
-    print(name)
+    Id = request.form['id']
+    colourWayId = request.form['colourWayId']
+    brandName = request.form['brandName']
+    productCode = request.form['productCode']
+    sellingIsFast = request.form['sellingIsFast']
+    currentPrice = request.form['currentPrice']
+    previousPrice = request.form['previousPrice']
+    lowestPriceInLast30Days = request.form['lowestPriceInLast30Days']
+    priceIsMarkedDown = request.form['priceIsMarkedDown']
+    currency = request.form['currency']
+    brandName_encoded = request.form['brandName_encoded']
+    price_range_indicator = request.form['price_range_indicator']
+    discount_percentage = request.form['discount_percentage']
+    lowest_price_tag = request.form['lowest_price_tag']
+    print(Id,name,colourWayId,brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
     cursor = connection.cursor() #create a connection to the SQL instance
-    s='''INSERT INTO asos_data(name) VALUES('{}');'''.format(name)
+    s='''INSERT INTO asos_data(id, name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(Id, name, colourWayId, brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
