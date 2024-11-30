@@ -204,7 +204,7 @@ def home():
 
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
-    return render_template("addShoes.html")
+  return render_template("addShoes.html")
   return '{"Result":"Success"}'
 
 @app.route("/getShoes", methods=['GET']) #Get Shoes
