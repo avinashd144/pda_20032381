@@ -198,7 +198,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/get", methods=['GET']) #Get Shoes
+@app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
   cursor.execute("SELECT * FROM asos_data")
   rows = cursor.fetchall()
@@ -232,3 +232,4 @@ def get():
 if __name__ == "__main__":
   #app.run(host='0.0.0.0',port='8080') #Run the flask app at port 8080
   app.run(host='0.0.0.0',port='8080', ssl_context=('cert.pem', 'privkey.pem')) #Run the flask app at port 8080
+  #app.run(host='0.0.0.0',port='5000', debug=True) #Run the flask app at port 8080
