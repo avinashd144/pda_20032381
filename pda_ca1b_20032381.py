@@ -227,6 +227,7 @@ def addShoes():
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
+    app.config['DEBUG'] = True
 
   else:
     return render_template('addShoes.html')
