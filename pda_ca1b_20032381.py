@@ -205,6 +205,7 @@ def home():
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
   if request.method == 'POST':
+    Id = request.form['id']
     name = request.form['name']
     colourWayId = request.form['colourWayId']
     brandName = request.form['brandName']
@@ -223,7 +224,7 @@ def addShoes():
     print(name,colourWayId)
     cursor = connection.cursor() #create a connection to the SQL instance
     #s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
-    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
+    s='''INSERT INTO asos_data(Id, name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(Id, name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
