@@ -207,8 +207,8 @@ def addShoes():
   if request.method == 'POST':
     name = request.form['name']
     colourWayId = request.form['colourWayId']
-    #brandName = request.form['brandName']
-    #productCode = request.form['productCode']
+    brandName = request.form['brandName']
+    productCode = request.form['productCode']
     #sellingIsFast = request.form['sellingIsFast']
     #currentPrice = request.form['currentPrice']
     #previousPrice = request.form['previousPrice']
@@ -223,7 +223,7 @@ def addShoes():
     print(name,colourWayId)
     cursor = connection.cursor() #create a connection to the SQL instance
     #s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
-    s='''INSERT INTO asos_data(name, colourWayId) VALUES('{}','{}');'''.format(name, colourWayId)
+    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode) VALUES('{}','{}','{}','{});'''.format(name, colourWayId, brandName, productCode)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
