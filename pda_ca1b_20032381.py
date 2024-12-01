@@ -205,6 +205,7 @@ def home():
 @app.route("/addShoes", methods=['GET','POST']) # Add shoes
 def addShoes():
   if request.method == 'POST':
+    name = request.form['name']
     colourWayId = request.form['colourWayId']
     brandName = request.form['brandName']
     productCode = request.form['productCode']
