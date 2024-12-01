@@ -213,17 +213,17 @@ def addShoes():
     currentPrice = request.form['currentPrice']
     previousPrice = request.form['previousPrice']
     lowestPriceInLast30Days = request.form['lowestPriceInLast30Days']
-    #priceIsMarkedDown = request.form['priceIsMarkedDown']
-    #currency = request.form['currency']
-    #brandName_encoded = request.form['brandName_encoded']
-    #price_range_indicator = request.form['price_range_indicator']
-    #discount_percentage = request.form['discount_percentage']
-    #lowest_price_tag = request.form['lowest_price_tag']
+    priceIsMarkedDown = request.form['priceIsMarkedDown']
+    currency = request.form['currency']
+    brandName_encoded = request.form['brandName_encoded']
+    price_range_indicator = request.form['price_range_indicator']
+    discount_percentage = request.form['discount_percentage']
+    lowest_price_tag = request.form['lowest_price_tag']
     #print(name,colourWayId,brandName,productCode,sellingIsFast,currentPrice,previousPrice,lowestPriceInLast30Days,priceIsMarkedDown,currency,brandName_encoded,price_range_indicator,discount_percentage,lowest_price_tag)
     print(name,colourWayId)
     cursor = connection.cursor() #create a connection to the SQL instance
     #s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
-    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days) VALUES('{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days)
+    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
