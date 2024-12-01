@@ -223,7 +223,7 @@ def addShoes():
     print(name,colourWayId)
     cursor = connection.cursor() #create a connection to the SQL instance
     #s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag) VALUES('{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode, sellingIsFast, currentPrice, previousPrice, lowestPriceInLast30Days, priceIsMarkedDown, currency, brandName_encoded, price_range_indicator, discount_percentage, lowest_price_tag)
-    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode) VALUES('{}','{}','{}','{});'''.format(name, colourWayId, brandName, productCode)
+    s='''INSERT INTO asos_data(name, colourWayId, brandName, productCode) VALUES('{}','{}','{}','{}');'''.format(name, colourWayId, brandName, productCode)
     app.logger.info(s)
     cursor.execute(s)
     connection.commit()
