@@ -8,7 +8,12 @@
 <body>
   <form action="/addShoes" method="POST">
 
-    ID (Nine Digit Unique Number): <input type="number", name="id"><br/><br/>
+    <!--ID (Nine Digit Unique Number): <input type="number", name="id"><br/><br/>       -->
+    <!-- ID -->
+    ID (Nine Digit Unique Number): 
+    <input type="number" name="id" id="id" required 
+           pattern="\d{9}" title="ID must be a nine-digit number."><br/><br/>
+
     Name (Nine Digit Unique Number): <input type="text", name="name"><br/><br/>
     ColourWayId: <input type="number", name="colourWayId"><br/><br/>
     BrandName: <input type="text", name="brandName"><br/><br/>
