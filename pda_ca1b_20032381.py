@@ -122,7 +122,7 @@ plt.ylabel('')
 plt.show()
 
 # Encoded the brandName
-key_features['brandName_encoded'] = pd.Categorical(key_features['brandName']).codes
+# key_features['brandName_encoded'] = pd.Categorical(key_features['brandName']).codes
 
 # Plotting bar chart for 'priceIsMarkedDown'
 
@@ -134,7 +134,7 @@ plt.show()
 # key_features['priceIsMarkedDown'].value_counts()
 
 # Converting this boolean feature into binary integers.
-key_features['priceIsMarkedDown'] = key_features['priceIsMarkedDown'].astype(int)
+# key_features['priceIsMarkedDown'] = key_features['priceIsMarkedDown'].astype(int)
 
 # Plotting bar chart for 'sellingIsFast'
 import matplotlib.pyplot as plt
@@ -147,7 +147,7 @@ plt.show()
 
 
 # Converting this boolean feature into binary integers.
-key_features['sellingIsFast'] = key_features['sellingIsFast'].astype(int)
+# key_features['sellingIsFast'] = key_features['sellingIsFast'].astype(int)
 
 # Plotting boxplot for currentPrice
 sns.boxplot(x=key_features['currentPrice'])
