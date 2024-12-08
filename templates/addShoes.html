@@ -15,7 +15,7 @@
     <!-- <input type="number" maxlength="9" minlength="9" name="id" id="fid" required  -->
            <!-- pattern="\d{9}" title="ID must be a nine-digit number."><br/><br/> -->
     <label for="fid">ID (Nine Digit Unique Number):</label>
-    <input type="number" name="id" id="fid" required 
+    <input type="text" name="id" id="fid" required 
     pattern="^\d{9}$" title="ID must be a nine-digit number." 
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="9" minlength="9"><br/><br/>
@@ -28,9 +28,9 @@
     pattern="[A-Za-z]+" title="Please enter only alphabetic characters."><br/><br/>
 
     <!-- ColourWayId ():  -->
-    <!-- <input type="number", name="colourWayId"><br/><br/>
-    <label for="fid">ID (Nine Digit Unique Number):</label> -->
-    <input type="number" name="colourWayId" id="fcolourWayId" required 
+    <!-- <input type="number", name="colourWayId"><br/><br/> -->
+    <label for="fcolourWayId">ColourWayId(Nine Digit Number):</label> 
+    <input type="text" name="colourWayId" id="fcolourWayId" required 
     pattern="^\d{9}$" title="ID must be a nine-digit number." 
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="9" minlength="9"><br/><br/>
@@ -61,9 +61,9 @@
     </select>
 
 
-    <!-- ProductCode (Nine Digit Number): 
-    <input type="number", name="productCode"><br/><br/> -->
-    <input type="number" name="ProductCode" id="productCode" required 
+    <!-- ProductCode (Nine Digit Number): -->
+    <label for="fproductCode">ProductCode:</label> 
+    <input type="text" name="productCode" id="fproductCode" required 
     pattern="^\d{9}$" title="ID must be a nine-digit number." 
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="9" minlength="9"><br/><br/>
