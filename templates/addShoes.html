@@ -11,21 +11,45 @@
     <!--ID (Nine Digit Unique Number): <input type="number", name="id"><br/><br/>       -->
     <!-- ID -->
     ID (Nine Digit Unique Number): 
-    <lable for = "fid">ID</lable>
-    <input type="number" name="id" id="fid" required 
-           pattern="\d{9}" title="ID must be a nine-digit number."><br/><br/>
+    <!-- <lable for = "fid">ID</lable> -->
+    <!-- <input type="number" maxlength="9" minlength="9" name="id" id="fid" required  -->
+           <!-- pattern="\d{9}" title="ID must be a nine-digit number."><br/><br/> -->
 
-    Name (Nine Digit Unique Number): <input type="text", name="name"><br/><br/>
-    ColourWayId: <input type="number", name="colourWayId"><br/><br/>
-    BrandName: <input type="text", name="brandName"><br/><br/>
-    ProductCode (Nine Digit Unique Number): <input type="number", name="productCode"><br/><br/>
+    <label for="fid">ID (Nine Digit Unique Number):</label>
+    <input type="text" name="id" id="fid" required 
+    pattern="^\d{9}$" title="ID must be a nine-digit number." 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+    maxlength="9" minlength="9"><br/><br/>
+
+
+    Name (Nine Digit Number): 
+    <lable for = "fid">ID</lable>
+    <input type="text", name="name" id="fname" required ><br/><br/>
+
+    ColourWayId (): 
+    <input type="number", name="colourWayId"><br/><br/>
+
+    BrandName: 
+    <input type="text", name="brandName"><br/><br/>
+
+    ProductCode (Nine Digit Number): 
+    <input type="number", name="productCode"><br/><br/>
     
-    SellingIsFast:<input type="checkbox" name="sellingIsFast"><br/><br/>
+    SellingIsFast:
+    <input type="checkbox" name="sellingIsFast"><br/><br/>
    
-    CurrentPrice: <input type="number", name="currentPrice"><br/><br/>
-    PreviousPrice: <input type="number", name="previousPrice"><br/><br/>
-    LowestPriceInLast30Days: <input type="number", name="lowestPriceInLast30Days"><br/><br/>
-    PriceIsMarkedDown: <input type="number", name="priceIsMarkedDown"><br/><br/>
+    CurrentPrice: 
+    <input type="number", name="currentPrice"><br/><br/>
+
+    PreviousPrice: 
+    <input type="number", name="previousPrice"><br/><br/>
+
+    LowestPriceInLast30Days: 
+    <input type="number", name="lowestPriceInLast30Days"><br/><br/>
+
+    PriceIsMarkedDown: 
+    <input type="number", name="priceIsMarkedDown"><br/><br/>
+
     Currency: <input type="number", name="currency"><br/><br/>
     BrandName: <input type="number", name="brandName"><br/><br/>
     Price_range_indicator: <input type="text", name="price_range_indicator"><br/><br/>
