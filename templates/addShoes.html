@@ -10,31 +10,64 @@
 
     <!--ID (Nine Digit Unique Number): <input type="number", name="id"><br/><br/>       -->
     <!-- ID -->
-    ID (Nine Digit Unique Number): 
+    <!-- ID (Nine Digit Unique Number):  -->
     <!-- <lable for = "fid">ID</lable> -->
     <!-- <input type="number" maxlength="9" minlength="9" name="id" id="fid" required  -->
            <!-- pattern="\d{9}" title="ID must be a nine-digit number."><br/><br/> -->
-
     <label for="fid">ID (Nine Digit Unique Number):</label>
-    <input type="text" name="id" id="fid" required 
+    <input type="number" name="id" id="fid" required 
     pattern="^\d{9}$" title="ID must be a nine-digit number." 
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="9" minlength="9"><br/><br/>
 
+    <!-- Name:  -->
+    <!-- <lable for = "fname">ID</lable>
+    <input type="text", name="name" id="fname" required ><br/><br/> -->
+    <label for="fname">Name:</label>
+    <input type="text" name="name" id="fname" required 
+    pattern="[A-Za-z]+" title="Please enter only alphabetic characters."><br/><br/>
 
-    Name (Nine Digit Number): 
-    <lable for = "fid">ID</lable>
-    <input type="text", name="name" id="fname" required ><br/><br/>
+    <!-- ColourWayId ():  -->
+    <!-- <input type="number", name="colourWayId"><br/><br/>
+    <label for="fid">ID (Nine Digit Unique Number):</label> -->
+    <input type="number" name="colourWayId" id="fcolourWayId" required 
+    pattern="^\d{9}$" title="ID must be a nine-digit number." 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+    maxlength="9" minlength="9"><br/><br/>
 
-    ColourWayId (): 
-    <input type="number", name="colourWayId"><br/><br/>
+    <!-- BrandName: 
+    <input type="text", name="brandName"><br/><br/> -->
+    <label for="fbrandName">Choose a brand:</label>
+    <select id="fbrandName" name="brandName">
+        <option value="Be Mine">Be Mine</option>
+        <option value="ASOS DESIGN">ASOS DESIGN</option>
+        <option value="Public Desire">Public Desire</option>
+        <option value="Crocs">Crocs</option>
+        <option value="Dr Martens">Dr Martens</option>
+        <option value="Raid">Raid</option>
+        <option value="Stradivarius">Stradivarius</option>
+        <option value="SIMMI Shoes">SIMMI Shoes</option>
+        <option value="New Look">New Look</option>
+        <option value="Be Mine Wide Fit">Be Mine Wide Fit</option>
+        <option value="Simmi Wide Fit">Simmi Wide Fit</option>
+        <option value="Clarks Originals">Clarks Originals</option>
+        <option value="Glamorous Wide Fit">Glamorous Wide Fit</option>
+        <option value="Timberland">Timberland</option>
+        <option value="Glamorous">Glamorous</option>
+        <option value="SEQWL Wide Fit">SEQWL Wide Fit</option>
+        <option value="Public Desire Wide Fit">Public Desire Wide Fit</option>
+        <option value="Koi Footwear">Koi Footwear</option>
+        <option value="SEQWL">SEQWL</option>
+    </select>
 
-    BrandName: 
-    <input type="text", name="brandName"><br/><br/>
 
-    ProductCode (Nine Digit Number): 
-    <input type="number", name="productCode"><br/><br/>
-    
+    <!-- ProductCode (Nine Digit Number): 
+    <input type="number", name="productCode"><br/><br/> -->
+    <input type="number" name="ProductCode" id="productCode" required 
+    pattern="^\d{9}$" title="ID must be a nine-digit number." 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
+    maxlength="9" minlength="9"><br/><br/>
+
     SellingIsFast:
     <input type="checkbox" name="sellingIsFast"><br/><br/>
    
