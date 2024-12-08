@@ -111,7 +111,7 @@
     <label for="fdiscount_percentage">Discount_percentage:</label> 
     <input type="text" name="discount_percentage" id="fdiscount_percentage" required 
     pattern="^\d{2}$" title="Enter Discount in Percentage" 
-    oninput="this.value = this.value.replace(/[^0-2]/g, '');" 
+    oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="2" ><br/><br/>
 
     <!-- Lowest_price_tag: <input type="text", name="lowest_price_tag"><br/><br/> -->
