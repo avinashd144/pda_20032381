@@ -37,7 +37,7 @@
 
     <!-- BrandName: 
     <input type="text", name="brandName"><br/><br/> -->
-    <label for="fbrandName">Choose a brand:</label>
+    <label for="fbrandName">BrandName:</label>
     <select id="fbrandName" name="brandName">
         <option value="Be Mine">Be Mine</option>
         <option value="ASOS DESIGN">ASOS DESIGN</option>
@@ -58,7 +58,7 @@
         <option value="Public Desire Wide Fit">Public Desire Wide Fit</option>
         <option value="Koi Footwear">Koi Footwear</option>
         <option value="SEQWL">SEQWL</option>
-    </select>
+    </select><br/><br/>
 
 
     <!-- ProductCode (Nine Digit Number): -->
@@ -68,8 +68,12 @@
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
     maxlength="9" minlength="9"><br/><br/>
 
-    SellingIsFast:
-    <input type="checkbox" name="sellingIsFast"><br/><br/>
+    <!-- SellingIsFast:
+    <input type="checkbox" name="sellingIsFast"><br/><br/> -->
+    <label>Selling Is Fast: 
+      <input type="radio" id="sellingYes" name="sellingIsFast" value="1" required> Yes
+      <input type="radio" id="sellingNo" name="sellingIsFast" value="0"> No
+  </label><br/><br/>
    
     CurrentPrice: 
     <input type="number", name="currentPrice"><br/><br/>
@@ -84,7 +88,7 @@
     <input type="number", name="priceIsMarkedDown"><br/><br/>
 
     Currency: <input type="number", name="currency"><br/><br/>
-    BrandName: <input type="number", name="brandName"><br/><br/>
+    
     Price_range_indicator: <input type="text", name="price_range_indicator"><br/><br/>
     Discount_percentage: <input type="number", name="discount_percentage"><br/><br/>
     Lowest_price_tag: <input type="text", name="lowest_price_tag"><br/><br/>
