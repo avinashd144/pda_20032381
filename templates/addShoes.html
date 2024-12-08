@@ -62,7 +62,7 @@
 
 
     <!-- ProductCode (Nine Digit Number): -->
-    <label for="fproductCode">ProductCode:</label> 
+    <label for="fproductCode">ProductCode(Nine Digit Number):</label> 
     <input type="text" name="productCode" id="fproductCode" required 
     pattern="^\d{9}$" title="ID must be a nine-digit number." 
     oninput="this.value = this.value.replace(/[^0-9]/g, '');" 
@@ -76,22 +76,49 @@
   </label><br/><br/>
    
     CurrentPrice: 
-    <input type="number", name="currentPrice"><br/><br/>
+    <input type="number", name="currentPrice" required><br/><br/>
 
     PreviousPrice: 
-    <input type="number", name="previousPrice"><br/><br/>
+    <input type="number", name="previousPrice" required><br/><br/>
 
     LowestPriceInLast30Days: 
-    <input type="number", name="lowestPriceInLast30Days"><br/><br/>
+    <input type="number", name="lowestPriceInLast30Days" required><br/><br/>
 
-    PriceIsMarkedDown: 
-    <input type="number", name="priceIsMarkedDown"><br/><br/>
+    <!-- PriceIsMarkedDown: 
+    <input type="number", name="priceIsMarkedDown"><br/><br/> -->
+    <label>PriceIsMarkedDown: 
+      <input type="radio" id="priceIsMarkedDownYes" name="priceIsMarkedDown" value="1" required> Yes
+      <input type="radio" id="priceIsMarkedDownNo" name="priceIsMarkedDown" value="0"> No
+  </label><br/><br/>
 
-    Currency: <input type="number", name="currency"><br/><br/>
+    <!-- Currency: <input type="number", name="currency"><br/><br/> -->
+    <label>Currency: 
+      <input type="radio" id="currencyEURO" name="currency" value="EURO" required> EURO
+      <input type="radio" id="currencyGBP" name="currency" value="GBP"> GBP
+  </label><br/><br/>
     
     Price_range_indicator: <input type="text", name="price_range_indicator"><br/><br/>
-    Discount_percentage: <input type="number", name="discount_percentage"><br/><br/>
-    Lowest_price_tag: <input type="text", name="lowest_price_tag"><br/><br/>
+
+    <label for="fprice_range_indicator">Price_range_indicator:</label>
+    <select id="fprice_range_indicator" name="price_range_indicator">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+        <option value="Very High">Very High</option>
+    </select><br/><br/>
+
+    <!-- Discount_percentage: <input type="number", name="discount_percentage"><br/><br/> -->
+    <label for="fdiscount_percentage">Discount_percentage:</label> 
+    <input type="text" name="discount_percentage" id="fdiscount_percentage" required 
+    pattern="^\d{2}$" title="ID must be a nine-digit number." 
+    oninput="this.value = this.value.replace(/[^0-2]/g, '');" 
+    maxlength="2" minlength="1"><br/><br/>
+
+    <!-- Lowest_price_tag: <input type="text", name="lowest_price_tag"><br/><br/> -->
+    <label>Lowest_price_tag: 
+      <input type="radio" id="lowest_price_tagYes" name="lowest_price_tag" value="1" required> Yes
+      <input type="radio" id="lowest_price_tagNo" name="lowest_price_tag" value="0"> No
+  </label><br/><br/>
 
     <button type="submit" name="submit">Add Shoe</button>
   </form>    
