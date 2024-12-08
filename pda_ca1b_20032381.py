@@ -174,16 +174,16 @@ key_features['discount_percentage'] = key_features['discount_percentage'].fillna
 key_features['lowest_price_tag'] = key_features['currentPrice'] == key_features['lowestPriceInLast30Days']
 
 # Data after encoding and adding new features
-key_features
+key_features_1 = key_features
 
 """# Loading Data"""
 
 import sqlite3
-connection = sqlite3.connect('asos.db', check_same_thread=False)
-key_features.to_sql('asos_data', connection, if_exists='append', index=False)
+connection = sqlite3.connect('asos_1.db', check_same_thread=False)
+key_features_1.to_sql('asos_data_1', connection, if_exists='append', index=False)
 cursor = connection.cursor()
 
-cursor.execute("SELECT * FROM asos_data")
+cursor.execute("SELECT * FROM asos_data_1")
 rows = cursor.fetchall()
 rows
 
@@ -237,7 +237,7 @@ def addShoes():
 
 @app.route("/getShoes", methods=['GET']) #Get Shoes
 def get():
-  cursor.execute("SELECT * FROM asos_data")
+  cursor.execute("SELECT * FROM asos_data_1")
   rows = cursor.fetchall()
   Results=[]
   for row in rows: #Format the Output Results and get to return string
