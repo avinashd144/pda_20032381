@@ -254,10 +254,10 @@ def get():
     Result['priceIsMarkedDown']=row[9]
     Result['currency']=row[10]
     #Result['brandName_encoded']=row[11]
-    Result['brandName']=row[11]
-    Result['price_range_indicator']=row[12]
-    Result['discount_percentage']=row[13]
-    Result['lowest_price_tag']=row[14]
+    #Result['brandName']=row[11]
+    Result['price_range_indicator']=row[11]
+    Result['discount_percentage']=row[12]
+    Result['lowest_price_tag']=row[13]
     Results.append(Result)
   response={'Results':Results, 'count':len(Results)}
   ret=app.response_class(
